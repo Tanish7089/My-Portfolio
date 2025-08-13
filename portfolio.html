@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* --- Basic Reset --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        /* --- Navbar --- */
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #00bcd4;
+        }
+
+        /* --- Header Section --- */
+        header {
+            background: #00bcd4;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* --- About Section --- */
+        #about {
+            padding: 40px 20px;
+            background: white;
+            text-align: center;
+        }
+
+        #about img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* --- Education Section --- */
+        #Education {
+            padding: 40px 20px;
+        }
+
+        .Education {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .Education h3 {
+            color: #00bcd4;
+        }
+
+        /* --- Projects Section --- */
+        #projects {
+            padding: 30px 20px;
+        }
+
+        .project {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .project h3 {
+            color: #00bcd4;
+        }
+
+        /* --- Skills Section --- */
+        #Skills {
+            padding: 40px 20px;
+        }
+
+        .Skills {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .Skills h3 {
+            color: #00bcd4;
+        }
+
+        /* --- Certification Section --- */
+        #Certifications {
+            padding: 40px 20px;
+        }
+
+        .Certifications {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .Certifications h3 {
+            color: #00bcd4;
+        }
+
+        /* --- Hobbies Section --- */
+        #Hobbies {
+            padding: 40px 20px;
+        }
+
+        .Hobbies {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .Hobbies h3 {
+            color: #00bcd4;
+        }
+
+        /* --- Extra Curricular Activities Section --- */
+        #Activities {
+            padding: 40px 20px;
+        }
+
+        .Activities {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .Activities h3 {
+            color: #00bcd4;
+        }
+
+         /* --- Details Section --- */
+        #Details {
+            padding: 40px 20px;
+        }
+
+        .Details {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .Details h3 {
+            color: #00bcd4;
+        }
+
+        /* --- Contact Section --- */
+        #contact {
+            background: #333;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        #contact input, #contact textarea {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+
+        #contact button {
+            background: #00bcd4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #contact button:hover {
+            background:#0198a8;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: #222;
+            color: #ccc;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">MyPortfolio</div>
+        <div>
+            <a href="#about">About</a>
+            <a href="#Education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Certifications">Certifications</a>
+            <a href="#Hobbies">Hobbies</a>
+            <a href="#Activities">Activities</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>Hello, I'm Tanish Patidar</h1>
+        <p>Aspiring Web Developer | Java Enthusiast</p>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <img src="images/IMG_1809 (1).jpg"  alt="Profile Photo">
+        <h2>About Me</h2>
+        <p>I am a passionate developer who loves to create modern, user-friendly websites and applications. I have skills in HTML, CSS, JavaScript, and Java.</p>
+    </section>
+
+    <!-- Education -->
+    <section id="Education">
+        <h2>EDUCATION</h2>
+
+        <div class="Education">
+            <h3>Medicaps University</h3>
+            <p>B.tech - Computer Science & Engineering | CGPA : 6.98/10 | 2022-2026</p>
+        </div>
+        <div class="Education">
+            <h3>Macro vision Academy</h3>
+            <p>12th | CBSE | Percentage:66.20/100 | 2022</p>
+        </div>
+        <div class="Education">
+            <h3>Macro vision Academy</h3>
+            <p>10th | CBSE | Percentage:79/100 | 2020</p>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>MY PROJECTS</h2>
+
+        <div class="project">
+            <h3><a href="portfolio.html"target="_main">Portfolio Website</a></h3>
+            <p>A personal website to showcase my work and skills.</p>
+        </div>
+
+        <div class="project">
+            <h3><a href="https://github.com/TanishMalik97/Zoom-Clone.git"target="_main">Zoom-Clone</a></h3>
+            <p>This project is a video conferencing web app similar to Zoom, built using the MERN stack (MongoDB, Express.js, React.js, Node.js).
+<br>
+Frontend (React.js): Creates the user interface for joining meetings, chatting, and controlling video/audio.
+<br>
+Backend (Node.js + Express.js): Handles meeting creation, user authentication, and communication between clients.
+<br>
+Database (MongoDB): Stores user accounts, meeting details, and chat history so data is saved even after the app restarts.
+<br>
+WebRTC: Enables real-time video and audio streaming directly between users.
+<br>
+Socket.IO: Allows instant communication for chat messages, participant updates, and meeting controls.
+<br>
+REST APIs: Used for actions like creating accounts, starting meetings, and retrieving stored data.
+<br>
+In short, React manages what users see, Node.js + Express.js handle requests and logic, MongoDB stores information, and WebRTC + Socket.IO make live calls and chats possible. This combination allows smooth real-time meetings over the web.</p>
+            
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="Skills">
+        <h2>KEY SKILLS</h2>
+
+        <div class="Skills">
+            <h3>Skills</h3>
+            <p> Core Java | DSA with java | Frontend(Html, CSS, JavaScript)</p>
+        </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="Certifications">
+        <h2>CERTIFICATIONS</h2>
+
+        <div class="Certifications">
+            <h3><a href="https://www.linkedin.com/posts/tanish-patidar-71a617282_javaassessment-activity-7208745310452346882-rDkw?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAETKbEYBtWGMlImE5QjKWj1ztHX7VdhiEEc" target="_main">Java Assissment</a></h3>
+            <p>Successfully completed Java course assignment, applying core programming concepts, OOP principles, and industry best practices. </p>
+        </div>
+
+        <div class="Certifications">
+            <h3><a href="https://www.linkedin.com/posts/tanish-patidar-71a617282_aws-cloudcomputing-certification-activity-7341173066405728257-fiIt?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAETKbEYBtWGMlImE5QjKWj1ztHX7VdhiEEc" target="_main">Academy Cloud Foundation</a></h3>
+            <p>This course has deepened my understanding of core AWS services, cloud concepts, and security.</p>
+        </div>
+        <div class="Certifications">
+            <h3><a href="https://www.linkedin.com/posts/tanish-patidar-71a617282_aws-cloudarchitecting-awscertification-activity-7346562280211259395-Rza3?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAETKbEYBtWGMlImE5QjKWj1ztHX7VdhiEEc" target="_main">Academy Cloud Architecting</a></h3>
+            <p>This course has strengthened my cloud architecture skills and broadened my understanding of AWS Infrastructure</p>
+        </div>
+    </section>
+
+    <!-- personal interests / hobbies -->
+    <section id="Hobbies">
+        <h2>PERSONAL INTERESTS / HOBBIES</h2>
+
+        <div class="Hobbies">
+            <p>- Horse Riding</p>
+            <p>- Playing Football</p>
+        </div>
+    </section>
+
+    <!-- Extra Curricular Activities -->
+    <section id="Activities">
+        <h2>EXTRA CURRICULAR ACTIVITIES</h2>
+
+        <div class="Activities">
+            <p>- Under-17 Atheletics cluster Player</p>
+            <p>- Under-19 football cluster Player</p>
+        </div>
+    </section>
+
+    <!-- personal Details -->
+    <section id="Details">
+        <h2>PERSONAL DETAILS</h2>
+
+        <div class="Details">
+            <p><b>Permanent Address</b> - Dhamnod, dist Dhar, Madhya pradesh, India - 454552</p>
+            <p><b>Current Address</b> - Navlakha, indore, Madhya pradesh, India - 452001</p>
+            <p><b>Contact</b> - 7089111281</p>
+            <p><b>Email</b> - Tanishpatidar1809@gmail.com</p>
+            <p><b>Known Languages</b> - English & Hindi</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <input type="text" id="name" placeholder="Your Name"><br>
+        <input type="email" id="email" placeholder="Your Email"><br>
+        <textarea id="message" placeholder="Your Message"></textarea><br>
+        <button onclick="sendMessage()">Send</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Tanish Patidar. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function sendMessage() {
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let message = document.getElementById("message").value;
+
+            if (name && email && message) {
+                alert(`Thanks ${name}! Your message has been sent.`);
+            } else {
+                alert("Please fill in all fields before sending.");
+            }
+        }
+    </script>
+</body>
+</html>
